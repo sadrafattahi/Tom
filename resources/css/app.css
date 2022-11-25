@@ -1,0 +1,122 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: #e5e7eb;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+    display: block;
+    vertical-align: middle;
+}
+
+@font-face {
+    font-family: roya;
+    src: url('../fonts/Roya.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: roya;
+    src: url('../fonts/RoyaB.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    font-family: roya, Roboto, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+
+[type='text'],
+[type='email'],
+[type='url'],
+[type='password'],
+[type='number'],
+[type='date'],
+[type='datetime-local'],
+[type='month'],
+[type='search'],
+[type='tel'],
+[type='time'],
+[type='week'],
+[multiple],
+textarea,
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    border-color: #6b7280;
+    border-width: 1px;
+    border-radius: 0px;
+    padding-top: 0.5rem;
+    padding-right: 0.75rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    --tw-shadow: 0 0 #0000;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto !important;
+    display: block;
+}
+
+.row {
+    margin: 0 auto;
+}
+
+.row::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+input,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*-----------------------------------------------------------------*/
+@media screen and (min-width:600px) {}
+
+
+
+/*-----------------------------------------------------------------*/
+@media screen and (min-width:900px) {}
+
+
+
+/*-----------------------------------------------------------------*/
+@media screen and (min-width:1280px) {}

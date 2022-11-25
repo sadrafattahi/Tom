@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#menu1').click(function () {
+                $('#topmenu ul').slideToggle()
+                $('#cats').css("right", "-300px")
+            })
+            $('#menu2').click(function () {
+                if ($('#cats').css('right') == '-300px') {
+                    $('#cats').css('right', '0')
+                    $('#topmenu ul').slideUp()
+                } else
+                    $('#cats').css('right', '-300px')
+
+            })
+            $('#cats .plus').click(function (e) {
+                $(this).parent().siblings('ul').slideToggle()
+                e.preventDefault()
+            })
+            $(window).resize(function () {
+                if ($('#cats').css('width') != "300px") {
+                    $('#cats .submenu').slideUp(0)
+                }
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div id="topmenu">
+        <nav class="wrapper">
+            <ul>
+                <li><a href="#">خانه</a></li>
+                <li><a href="#">درباره ما</a></li>
+                <li><a href="#">تماس با ما</a></li>
+                <li><a href="#">ورود</a></li>
+                <li><a href="#">عضویت</a></li>
+            </ul>
+        </nav>
+    </div>
+    <img src="menu.png" id="menu1">
+    <img src="menu.png" id="menu2">
+
+    <header id="header">
+        <div class="wrapper">
+            <div class="row">
+                <div id="logo" class="xs-12 sm-4">
+                    <img src="logo.png" width="140" height="140">
+                </div>
+                <div id="search" class="xs-12 sm-8">
+                    <h1>فروشگاه آنلاین</h1>
+                    <form action="#">
+                        <input type="search" name="search" placeholder="کالای مورنظرتان را جستجو کنید" />
+                        <input type="submit" value="جستجو">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav id="cats">
+        <ul class="menu">
+            <li class="item">
+                <a href="#">کالای دیجیتال <span class="plus">+</span></a>
+                <ul class="submenu">
+                    <li class="subitem">
+                        <a href="#">موبایل <span class="plus">+</span></a>
+                        <ul class="submenu">
+                            <li><a href="#">Apple</a></li>
+                            <li><a href="#">Samsung</a></li>
+                            <li><a href="#">LG</a></li>
+                            <li><a href="#">HTC</a></li>
+                            <li><a href="#">Sony</a></li>
+                            <li><a href="#">Huawei</a></li>
+                            <li><a href="#">Alcatel</a></li>
+                            <li><a href="#">Asus</a></li>
+                            <li><a href="#">Lenovo</a></li>
+                        </ul>
+                    </li>
+                    <li class="subitem">
+                        <a href="#">تبلت <span class="plus">+</span></a>
+                        <ul class="submenu">
+                            <li><a href="#">Apple</a></li>
+                            <li><a href="#">Samsung</a></li>
+                            <li><a href="#">LG</a></li>
+                            <li><a href="#">HTC</a></li>
+                            <li><a href="#">Sony</a></li>
+                            <li><a href="#">Huawei</a></li>
+                            <li><a href="#">Alcatel</a></li>
+                            <li><a href="#">Asus</a></li>
+                            <li><a href="#">Lenovo</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="item">
+                <a href="#">کالای دیجیتال <span class="plus">+</span></a>
+                <ul class="submenu">
+                    <li class="subitem">
+                        <a href="#">موبایل <span class="plus">+</span></a>
+                        <ul class="submenu">
+                            <li><a href="#">Apple</a></li>
+                            <li><a href="#">Samsung</a></li>
+                            <li><a href="#">LG</a></li>
+                            <li><a href="#">HTC</a></li>
+                            <li><a href="#">Sony</a></li>
+                            <li><a href="#">Huawei</a></li>
+                            <li><a href="#">Alcatel</a></li>
+                            <li><a href="#">Asus</a></li>
+                            <li><a href="#">Lenovo</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <main class="wrapper">
+        <div class="row">
+            <div id="content" class="xs-12 lg-9">
+                <section class="group row">
+                    <h2>پرفروش ها</h2>
+                    <div class="xs-12 sm-6 md-3">
+                        <article>
+                            <a href="#">
+                                <div class="image">
+                                    <img src="img_5terre.jpg" alt="">
+                                    <span class="imagelabel">پرفروش</span>
+                                </div>
+                                <h3>لب تاب 15 اینچی ایسوس</h3>
+                                <p class="rate">
+                                    <span><img src="star.png" class="star" alt="">3.6</span>
+                                    <span>از 60 رای</span>
+                                </p>
+                                <p class="price">303000تومان</p>
+                            </a>
+                            <a href="#" class="buy">افزودن به سبد خرید</a>
+                        </article>
+                    </div>
+                    <div class="xs-12 sm-6 md-3">
+                        <article>
+                            <a href="#">
+                                <div class="image">
+                                    <img src="img_5terre.jpg" alt="">
+                                    <span class="imagelabel">پرفروش</span>
+                                </div>
+                                <h3>لب تاب 15 اینچی ایسوس</h3>
+                                <p class="rate">
+                                    <span><img src="star.png" class="star" alt="">3.6</span>
+                                    <span>از 60 رای</span>
+                                </p>
+                                <p class="price">303000تومان</p>
+                            </a>
+                            <a href="#" class="buy">افزودن به سبد خرید</a>
+                        </article>
+                    </div>
+                    <div class="xs-12 sm-6 md-3">
+                        <article>
+                            <a href="#">
+                                <div class="image">
+                                    <img src="img_5terre.jpg" alt="">
+                                    <span class="imagelabel">پرفروش</span>
+                                </div>
+                                <h3>لب تاب 15 اینچی ایسوس</h3>
+                                <p class="rate">
+                                    <span><img src="star.png" class="star" alt="">3.6</span>
+                                    <span>از 60 رای</span>
+                                </p>
+                                <p class="price">303000تومان</p>
+                            </a>
+                            <a href="#" class="buy">افزودن به سبد خرید</a>
+                        </article>
+                    </div>
+                    <div class="xs-12 sm-6 md-3">
+                        <article>
+                            <a href="#">
+                                <div class="image">
+                                    <img src="img_5terre.jpg" alt="">
+                                    <span class="imagelabel">پرفروش</span>
+                                </div>
+                                <h3>لب تاب 15 اینچی ایسوس</h3>
+                                <p class="rate">
+                                    <span><img src="star.png" class="star" alt="">3.6</span>
+                                    <span>از 60 رای</span>
+                                </p>
+                                <p class="price">303000تومان</p>
+                            </a>
+                            <a href="#" class="buy">افزودن به سبد خرید</a>
+                        </article>
+                    </div>
+                    <div class="xs-12 sm-6 md-3">
+                        <article>
+                            <a href="#">
+                                <div class="image">
+                                    <img src="img_5terre.jpg" alt="">
+                                    <span class="imagelabel">پرفروش</span>
+                                </div>
+                                <h3>لب تاب 15 اینچی ایسوس</h3>
+                                <p class="rate">
+                                    <span><img src="star.png" class="star" alt="">3.6</span>
+                                    <span>از 60 رای</span>
+                                </p>
+                                <p class="price">303000تومان</p>
+                            </a>
+                            <a href="#" class="buy">افزودن به سبد خرید</a>
+                        </article>
+                    </div>
+                </section>
+            </div>
+            <aside id="sidebar" class="xs-12 lg-3">
+                <section class="group row">
+                    <h2>تفیف ویژه</h2>
+                    <div class="xs-12 sm-6 md-3 lg-12">
+                        <article>
+                            <a href="#">
+                                <img src="img_forest.jpg" alt="">
+                                <span class="imagelabel">تخفیف ویژه</span>
+                                <span class="discount">15%</span>
+                                <div class="slideup">
+                                    <p class="comment">هارد دیسک اینترنال سیگست ظرفیت 1 ترابایت</p>
+                                    <p class="price">300300تومان</p>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                    <div class="xs-12 sm-6 md-3 lg-12">
+                        <article>
+                            <a href="#">
+                                <img src="img_forest.jpg" alt="">
+                                <span class="imagelabel">تخفیف ویژه</span>
+                                <span class="discount">15%</span>
+                                <div class="slideup">
+                                    <p class="comment">هارد دیسک اینترنال سیگست ظرفیت 1 ترابایت</p>
+                                    <p class="price">300300تومان</p>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                    <div class="xs-12 sm-6 md-3 lg-12">
+                        <article>
+                            <a href="#">
+                                <img src="img_forest.jpg" alt="">
+                                <span class="imagelabel">تخفیف ویژه</span>
+                                <span class="discount">15%</span>
+                                <div class="slideup">
+                                    <p class="comment">هارد دیسک اینترنال سیگست ظرفیت 1 ترابایت</p>
+                                    <p class="price">300300تومان</p>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                </section>
+                <section class="group row"></section>
+            </aside>
+        </div>
+    </main>
+    <footer>
+        <section class="row" id="contact">
+            <ul class="wrapper">
+                <li>7 روز هفته و 24 ساعت شبانه روز پاسخگوی شما هستیم</li>
+                <li class="mail"><img src="mail.png" alt="">contact@domain.com</li>
+                <li class="phone"><img src="phone.png" alt="">021-44444444</li>
+            </ul>
+        </section>
+        <section class="row" id="details">
+            <div class="wrapper">
+                <div class="xs-12 md-4">
+                    <h3 class="about">درباره فروشگاه</h3>
+                    <p>
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،
+                        چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی
+                        مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه
+                        درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری
+                        را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این
+                        صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و
+                        زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی
+                        اساسا مورد استفاده قرار گیرد.
+                    </p>
+                </div>
+                <div class="xs-6 md-2">
+                    <h3>اطلاعات</h3>
+                    <ul>
+                        <li><a href="#">درباره ما</a></li>
+                        <li><a href="#">حریم خصوصی</a></li>
+                        <li><a href="#">شرایط و قوانین</a></li>
+                    </ul>
+                </div>
+                <div class="xs-6 md-2">
+                    <h3>خدمات مشتریان</h3>
+                    <ul>
+                        <li><a href="#">تماس با ما</a></li>
+                        <li><a href="#">بازگشت</a></li>
+                        <li><a href="#">نقشه سایت</a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </div>
+                <div class="xs-6 md-2">
+                    <h3>امکانات جانبی</h3>
+                    <ul>
+                        <li><a href="#">تماس با ما</a></li>
+                        <li><a href="#">بازگشت</a></li>
+                        <li><a href="#">نقشه سایت</a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </div>
+                <div class="xs-6 md-2">
+                    <h3>حساب من</h3>
+                    <ul>
+                        <li><a href="#">تماس با ما</a></li>
+                        <li><a href="#">بازگشت</a></li>
+                        <li><a href="#">نقشه سایت</a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="row" id="copyright">
+            <div class="wrapper">
+                <div class="xs-12 md-6">
+                    <p>کلیه حقوق مادی و معنوی این سایت متعلق به <b>فروشگاه آنلاین &nbsp;</b>می باشد. </p>
+                </div>
+                <div class="xs-12 md-6">
+                    <ul>
+                        <li><a href="#"><img src="facebook.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="facebook.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="facebook.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="facebook.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="facebook.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="facebook.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="facebook.jpg" alt=""></a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <div id="test">
+        jhjkhjkhjkhkjhkjhk
+    </div>
+</body>
+
+</html>

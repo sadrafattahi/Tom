@@ -1,0 +1,20 @@
+{
+    "lang": "فا",
+    "home": "Home Page",
+    "about": "About",
+    "contact": "Contact",
+    "dashboard": "Dashboard",
+    "back": "Back",
+    "login": "Login",
+    "register": "register",
+    "exit": "Exit",
+    "email": "Email",
+    "password": "Password",
+    "remember": "remember me",
+    "forget": "forget password?",
+    "name": "Name",
+    "confirm_password": "Confirm Password",
+    "has_your_email": "Exist Your Email?",
+    "forget_password": "Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.",
+    "email_reset_button": "Email Password Reset Link"
+}
